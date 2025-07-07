@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Run Test'){
             steps{
-                bat "docker-compose -f test-suites up"
+                bat "docker-compose -f test-suites.yaml up"
             }
         }
     }
@@ -17,7 +17,7 @@ pipeline{
     post{
         always{
             bat "docker-compose -f grid.yaml down"
-            bat "docker-compose -f test-suites down"
+            bat "docker-compose -f test-suites.yaml down"
         }
     }
 }
