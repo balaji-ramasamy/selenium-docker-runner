@@ -19,7 +19,7 @@ pipeline{
             bat "docker-compose -f grid.yaml down"
             bat "docker-compose -f test-suites.yaml down"
             archiveArtifacts artifacts: 'output/flight-reservation/emailable-report.html', followSymLinks: false,
-            archiveArtifacts artifacts: 'output/vendor-portal/emailable-report.html', followSymLinks: false,
+            archiveArtifacts artifacts: 'output/vendor-portal/emailable-report.html', followSymLinks: false
         }
     }
 }
