@@ -3,7 +3,8 @@ services:
   vendor-portal:
     image: baramasa27/selenium
     environment:
-    - BROWSER=chrome
+    #- BROWSER=${BROWSER}
+    - BROWSER
     - HUB_HOST=hub
     - THREAD_COUNT=3
     - TEST_SUITE=vendor-portal.xml
@@ -12,7 +13,7 @@ services:
   flight-reservation:
     image: baramasa27/selenium
     environment:
-    - BROWSER=firefox
+    - BROWSER
     - HUB_HOST=hub
     - THREAD_COUNT=4
     - TEST_SUITE=flight-reservation.xml
